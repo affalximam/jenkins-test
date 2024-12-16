@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/sripts/deliver.sh'
+                sh './jenkins/scripts/deliver.sh'
                 input message : 'Jika sudah berhasil menjalankan klik "PROCEED" untuk menahiri'
                 sh './jenkins/script/kill.sh'
             }
